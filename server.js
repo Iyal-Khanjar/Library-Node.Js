@@ -17,7 +17,7 @@ const mongoose = require('mongoose');
 
 app.use('/api/books', require('./routes/books.route'));
 
-mongoose.connect('mongodb://localhost/books', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+mongoose.connect('mongodb+srv://iyal:iyal123@cluster0.h9ztc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     console.log('Connected to DB');
 });
 app.listen(port, () => console.log(`Listening to port ${port}`))
