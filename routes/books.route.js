@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 }).get('/:year', (req, res) => {
     bookController.getAllBookByYear(req, res);
 }).get('/:name', (req, res) => {
-    bookController.getAllBookByYear(req, res);
+    bookController.getAllBookByName(req, res);
 }).post('/', (req, res) => {
     bookController.addNewBook(req, res);
 }).delete('/:id', (req, res) => {
