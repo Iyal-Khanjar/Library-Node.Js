@@ -22,7 +22,7 @@ const getAllBookByYear = ((req, res) => {
 const addNewBook = ((req, res) => {
     const { name, aurther, publishYear, language, stars } = req.body;
 
-    if (publishYear < new Date().getFullYear()) {
+    if (publishYear <= new Date().getFullYear()) {
         const Book = new BookModel({
             name: name,
             aurther: aurther,
