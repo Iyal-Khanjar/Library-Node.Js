@@ -20,7 +20,7 @@ const getAllBookByYear = ((req, res) => {
 
 // get all books by name
 const getAllBookByName = ((req, res) => {
-    let names = req.params.name;
+    let names = req.params.names;
 
     BookModel.find({ name: names }, (err, data) => {
         if (err) throw err;
