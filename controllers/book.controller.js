@@ -17,6 +17,17 @@ const getAllBookByYear = ((req, res) => {
         res.status(200).json(data);
     })
 })
+
+// get all books by name
+const getAllBookByYear = ((req, res) => {
+    let name = req.params.name;
+
+    BookModel.find({ name: name }, (err, data) => {
+        if (err) throw err;
+        res.status(200).json(data);
+    })
+})
+
 // add new Book
 const addNewBook = ((req, res) => {
     const { name, aurther, publishYear, language, stars } = req.body;
