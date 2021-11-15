@@ -18,16 +18,6 @@ const getAllBookByYear = ((req, res) => {
     })
 })
 
-// get all books by name
-const getAllBookByName = ((req, res) => {
-    let names = req.params.names;
-
-    BookModel.find({ name: names }, (err, data) => {
-        if (err) throw err;
-        res.status(200).json(data);
-    })
-})
-
 // add new Book
 const addNewBook = ((req, res) => {
     const { name, aurther, publishYear, language, stars } = req.body;
@@ -84,7 +74,6 @@ const updateBook = ((req, res) => {
 module.exports = {
     getAllBook,
     getAllBookByYear,
-    getAllBookByName,
     addNewBook,
     deleteBook,
     updateBook
