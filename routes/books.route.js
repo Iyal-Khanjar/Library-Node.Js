@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     bookController.getAllBook(req, res);
 }).get('/:year', (req, res) => {
     bookController.getAllBookByYear(req, res);
-}).get('/:name', (req, res) => {
+}).get('/:names', (req, res) => {
     bookController.getAllBookByName(req, res);
 }).post('/', (req, res) => {
     bookController.addNewBook(req, res);
